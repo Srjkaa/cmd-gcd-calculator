@@ -1,0 +1,1 @@
+# Simple GCD calculator via cmd
