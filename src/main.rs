@@ -1,18 +1,8 @@
 use std::io::{Write, stderr};
 use std::str::FromStr;
 
-fn gcd(mut n: u64, mut m: u64) -> u64 {
-    assert!(n != 0 && m != 0);
-    while m != 0 {
-        if n > m {
-            let t = m;
-            m = n;
-            n = t;
-        }
-        m %= n;
-    }
-    n
-}
+mod gcd;
+use gcd::gcd;
 
 fn main() {
     let mut numbers: Vec<u64> = Vec::new();
